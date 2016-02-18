@@ -35,7 +35,7 @@ __rights__ = 'Copyright (c) 2011 Paul Ross. Copyright (c) 2015 AHL.'
 import sys
 
 import pytest
-# Create a specialise exception called ExceptionLength that we can use on error.
+# Create a specialised exception called ExceptionLength that we can use on error.
 
 # Fill in the functions that Length needs.
 class Length(object):
