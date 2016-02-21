@@ -11,7 +11,7 @@ speech. After execution the speech might need some light editing.
 
 Note to my current employer: This is no reflection whatsoever on the
 organisation that I work for. This all comes from one of my former CEOs,
-Stephan Elop, during his tenure at Nokia. The code is mine but the words are
+Stephen Elop, during his tenure at Nokia. The code is mine but the words are
 all his, slightly transliterated ("<big corp.>" replaces "Nokia",
 "<little corp.>" replaces "Symbian" and "<other corp.>" replaces "Microsoft"). 
 
