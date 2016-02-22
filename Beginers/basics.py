@@ -1,8 +1,3 @@
-'''
-Created on 22 Feb 2016
-
-@author: paulross
-'''
 # Given
 x = 10000.0
 y = 3.0
@@ -18,22 +13,28 @@ print (x - 1) / y
 # Given 
 x = 'foo'
 y = 'bar'
-# Create 'foobar'
-# Create 'foo -> bar'
+# Create 'foobar' using x and y
+# Create 'foo -> bar' using x and y
 
 # Given
-# 'hello world'
-# print 'HELLO WORLD'
-# print 'hellX wXrld'
+# x = 'hello world'
+# from x create 'HELLO WORLD'
+# from x create 'hellX wXrld'
 
 # Given
 # x = 10000.0
 # y = 3.0
-# print "10000 / 3 = 3333"
+# print "10000 / 3 = 3333" using x and y
 
 # Given
 # ['hello', 'world']
 # print 'helloworld'
-# print 'hello, world'
+# print 'hello world'
 # print 'hello
 # world'
+
+# Given
+# x = "Monty Python and the Holy Grail"
+# create the list ['Monty', 'Python', 'and', 'the', 'Holy', 'Grail']
+# y = "one,two,three,four"
+# create the list ['one', 'two', 'three', 'four'
