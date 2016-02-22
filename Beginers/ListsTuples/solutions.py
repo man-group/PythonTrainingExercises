@@ -12,9 +12,12 @@ print the length of x
 selecting from lists
 ====================
 Given the list
-x = ['A', 'B', 'C']
+x = ['A', 'B', 'C', 'D', 'E']
 return the first item
 return the last item
+return the second last item ('D')
+return all elements up to the last i.e. ('A','B','C', 'D')
+return all elememtns which are not the first or the last i.e ('B','C','D')
 return the x reversed using indexing
 
 selecting first items
