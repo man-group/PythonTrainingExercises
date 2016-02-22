@@ -1,7 +1,7 @@
 """
 Understanding Args and Kwargs
 
-What will be the output from the following functions and why
+What will be the output from the following function calls
 """
 
 def f(x, y, z):
