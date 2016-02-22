@@ -1,5 +1,10 @@
 """We have an existing dictionary that maps US states to their capitals.
 
+Print the state capital of Idaho
+Print all states.
+Print all capitals.
+Create a single string 'Alabama -> Montgomery, Alaska -> Juneau, ...'
+
 Now we want to add the reverse look up, given the name of a capital what state
 is it in?
 
@@ -68,6 +73,21 @@ STATES_CAPITALS = {
     'Wisconsin' : 'Madison',
     'Wyoming' : 'Cheyenne',
 }
+
+def capital_of_Idaho():
+    return STATES_CAPITALS['Idaho']
+
+def all_states():
+    return STATES_CAPITALS.keys()
+
+def all_capitals():
+    return STATES_CAPITALS.values()
+
+def states_capitals_string():
+    l = []
+    for k in sorted(STATES_CAPITALS.keys()):
+        l.append('%s -> %s' % (k, STATES_CAPITALS[k]))
+    return ', '.join(l)
 
 # Pre-compute the reverse lookup, this is done a module import time
 # What can go wrong here? - duplicates

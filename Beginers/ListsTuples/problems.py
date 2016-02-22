@@ -1,5 +1,48 @@
 """Some exercises involving lists.
 
+creating lists
+==============
+a='A'
+b='B'
+c='C'
+x = list()
+add a, b, c into x
+print the length of x
+
+selecting from lists
+====================
+Given the list
+x = ['A', 'B', 'C']
+return the first item
+return the last item
+return the x reversed using indexing
+
+selecting first items
+======================= 
+Given the following:
+x = [('A','x'), ('B','y'), ('C','z')]
+return ['A','B','C']
+
+add 5 to values
+=================
+Given the following:
+x = [1, 10, 20]
+return a list with 5 added to the numbers i.e. [6, 15, 25]
+
+divisible by 5
+==================
+Given the following:
+x = [1, 10,  15, 3, 12, 15, 25, 50]
+return a list with only numbers divisible by 5 (% modulo operator)
+
+merge_lists
+===================
+given the lists:
+x = ['A', 'B', 'C']
+y = ['x', 'y', 'z']
+create the following list:
+[('A','x'), ('B','y'), ('C','z')]
+
 transpose()
 ===========
 Create a function that takes a list of lists and returns the transpose. So given:
@@ -55,6 +98,49 @@ Created on 21 Feb 2016
 """
 import pytest
 
+def create_list():
+    """Create a list."""
+    a ='A'
+    b ='B'
+    c ='C'
+    # Your code goes here
+
+def select_first_item():
+    """Return first item."""
+    x = ['A', 'B', 'C']
+    # Your code goes here
+
+def select_last_item():
+    """Return first item."""
+    x = ['A', 'B', 'C']
+    # Your code goes here
+
+def select_reversed():
+    """Return list reversed."""
+    x = ['A', 'B', 'C']
+    # Your code goes here
+
+def select_first_items():
+    """Select first item on each list."""
+    x = [('A','x'), ('B','y'), ('C','z')]
+    # Your code goes here
+
+def add_5_to_values():
+    """Return the list with 5 added to each value."""
+    x = [1, 10, 20]
+    # Your code goes here
+
+def get_divisble_by_5():
+    """Return elements that are divisble by 5."""
+    x = [1, 10,  15, 3, 12, 15, 25, 50]
+    # Your code goes here
+
+def merge_lists():
+    """Returns pairs from each list."""
+    x = ['A', 'B', 'C']
+    y = ['x', 'y', 'z']
+    # Your code goes here
+
 def transpose(list_of_lists):
     """Transpose a list of lists."""
     # Your code goes here
@@ -73,6 +159,30 @@ def rotate_right(alist):
     pass
 
 #=================== Tests ========================
+def test_create_list():
+    assert create_list() == ['A', 'B', 'C']
+
+def test_select_first_item():
+    assert select_first_item() == 'A'
+
+def test_select_last_item():
+    assert select_last_item() == 'C'
+    
+def test_select_reversed():
+    assert select_reversed() == ['C', 'B', 'A']
+    
+def test_select_first_items():
+    assert select_first_items() == ['A','B','C']
+    
+def test_add_5_to_values():
+    assert add_5_to_values() == [6, 15, 25]
+    
+def test_get_divisble_by_5():
+    assert get_divisble_by_5() == [10, 15, 15, 25, 50]
+    
+def test_merge_lists():
+    assert merge_lists() == [('A', 'x'), ('B', 'y'), ('C', 'z')]
+
 def test_transpose():
     data = [
         [1, 2, 3],

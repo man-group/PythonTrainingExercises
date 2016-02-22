@@ -1,5 +1,10 @@
 """We have an existing dictionary that maps US states to their capitals.
 
+Print the state capital of Idaho
+Print all states.
+Print all capitals.
+Create a single string 'Alabama -> Montgomery, Alaska -> Juneau, ...'
+
 Now we want to add the reverse look up, given the name of a capital what state
 is it in?
 
@@ -68,6 +73,25 @@ STATES_CAPITALS = {
     'Wisconsin' : 'Madison',
     'Wyoming' : 'Cheyenne',
 }
+
+
+def capital_of_Idaho():
+    # Your code here
+    pass
+
+def all_states():
+    # Your code here
+    pass
+
+def all_capitals():
+    # Your code here
+    pass
+
+def states_capitals_string():
+    # Your code here
+    pass
+
+
 
 def get_state(capital):
     pass
