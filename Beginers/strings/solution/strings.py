@@ -1,8 +1,8 @@
 """With this string:
 'monty pythons flying circus'
 
-Create a function that returns a sorted string with no duplicate characters but
-include any whitespace:
+Create a function that returns a sorted string with no duplicate characters
+(keep any whitespace):
 Example: ' cfghilmnoprstuy'
 
 Create a function that returns the words in reverse order:
