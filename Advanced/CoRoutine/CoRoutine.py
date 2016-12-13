@@ -28,13 +28,8 @@ def keep_sorted():
     """ 
     l = []
     while True:
-        v = yield l
-        if v is not None:
-            # This is a simple but not very efficient way of maintaining the
-            # sort. A more efficient way would be to use bisect to insert the
-            # word in the place that maintains the sort
-            l.append(v)
-            l.sort()
+        # Your code goes here
+        yield l
 
 
 if __name__ == '__main__':
