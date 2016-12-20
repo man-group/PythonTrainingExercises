@@ -146,7 +146,7 @@ def merge_lists():
     """Returns pairs from each list."""
     x = ['A', 'B', 'C']
     y = ['x', 'y', 'z']
-    return zip(x, y)
+    return list(zip(x, y))
 
 def transpose_hard(list_of_lists):
     """Transpose  a list of lists, the hard way."""
@@ -170,11 +170,13 @@ def peak_to_peak(alist):
 
 def rotate_left(alist):
     """Rotates a list to the left so that the first item appears at the end."""
-    alist.append(alist.pop(0))
+    if len(alist):
+        alist.append(alist.pop(0))
 
 def rotate_right(alist):
     """Rotates a list to the right so that the last item appears at the beginning."""
-    alist.insert(0, alist.pop())
+    if len(alist):
+        alist.insert(0, alist.pop())
 
 #=================== Tests ========================
 def test_create_list():
