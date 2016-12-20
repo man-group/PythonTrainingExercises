@@ -7,7 +7,7 @@ def what_sign(n):
     pass
 
 
-def test_what_sign(n):
+def test_what_sign():
     assert what_sign(3) == 'Positive'
     assert what_sign(0) == 'Zero'
     assert what_sign(-3) == 'Negative'

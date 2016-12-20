@@ -11,7 +11,7 @@ def what_sign(n):
         return 'Zero'
 
 
-def test_what_sign(n):
+def test_what_sign():
     assert what_sign(3) == 'Positive'
     assert what_sign(0) == 'Zero'
     assert what_sign(-3) == 'Negative'
@@ -24,7 +24,7 @@ For numbers which are multiples of both three and five print "FizzBuzz".
 """
 
 def fizzbuzz():
-    for num in xrange(1,101):
+    for num in range(1,101):
         msg = ''
         if num % 3 == 0:
             msg += 'Fizz'
@@ -72,7 +72,7 @@ def open_connection():
 
 
 def connect(nretry=100):
-    for _ in xrange(nretry):
+    for _ in range(nretry):
         try:
             if open_connection():
                 return
