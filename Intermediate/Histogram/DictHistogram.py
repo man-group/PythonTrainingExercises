@@ -47,9 +47,10 @@ import random
 def float_list_to_int_dict(lst, bucket_size):
     """Takes a list of floats and a bucket size and return a dict of
     { n : count, ...} where the count is the number of floats that drop into
-    the range n * bucket_size to (n + 1) * bucket_size."""
+    the range (n - 0.5) * bucket_size to (n + 0.5) * bucket_size."""
     # Your code goes here
     pass
+
 
 def pprint_histogram(d, bucket_size, char='+', width=80, key_format='%6.3f'):
     """Pretty prints a dict of {key : count, ...} as ASCII.
@@ -74,6 +75,15 @@ def pformat_histogram(d, bucket_size, char='+', width=80, key_format='%6.3f'):
     Returns a string."""
     # Your code goes here
     pass
+
+
+def test_histogram_simple():
+    values = [-2.0, -0.2, 0.0, 1.8, 2.0]
+    bucket_size = 1
+    histogram = float_list_to_int_dict(values, bucket_size)
+    assert histogram == {-2: 1,
+                         0: 2,
+                         2: 2}
 
 
 def test_histogram():
