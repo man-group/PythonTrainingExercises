@@ -77,7 +77,7 @@ class DataBase(object):
     
     def __init__(self, network):
         self.network = network
-        self.number_of_connections += 1
+        DataBase.number_of_connections += 1
         
     def read(self):
         if self.network == BAD_NETWORK:
@@ -85,7 +85,7 @@ class DataBase(object):
         return 'Data...'
     
     def close(self):
-        self.number_of_connections -= 1
+        DataBase.number_of_connections -= 1
 
 def reset():
     DataBase.number_of_connections = 0
@@ -95,16 +95,20 @@ def reset():
 def get_data_one(network):
     db = DataBase(network)
     result = ''
+    # Catch the specific exception and report it.
+    # This is not a particularly good way of dealing with network failure
     try:
         result = db.read()
     except IOError as err:
         print(err)
-        db.close()
+    db.close()
     return result
 
 def get_data_two(network):
     db = DataBase(network)
     result = ''
+    # Do not catch the specific exception, this forces the caller to
+    # acknowledge that a failure has happened.
     try:
         result = db.read()
     finally:
