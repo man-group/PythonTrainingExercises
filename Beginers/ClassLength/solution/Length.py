@@ -59,7 +59,7 @@ class Length(object):
     def convert(self, uom):
         """Returns the value in the specified units of measure."""
         try:
-            return self.value * self.CONVERSION_FACTOR[uom]
+            return self.value * Length.CONVERSION_FACTOR[uom]
         except KeyError:
             raise ExceptionLength('Can not convert to: {0:s}'.format(str(uom)))
         

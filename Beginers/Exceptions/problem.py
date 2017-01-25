@@ -28,7 +28,6 @@ Created on 3 Jan 2017
 
 @author: paulross
 '''
-from __future__ import print_function
 import pytest
 
 #==== Exercise 1:

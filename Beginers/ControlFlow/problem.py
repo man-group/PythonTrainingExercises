@@ -1,9 +1,10 @@
 """
-Write a program which returns 'Positive' 'Zero' or 'Negative' when given a number
+Write a function 'what_sign' which returns 'Positive' 'Zero' or 'Negative' when given a number
 """
 
 
 def what_sign(n):
+    # Your code goes here
     pass
 
 
@@ -20,6 +21,7 @@ For numbers which are multiples of both three and five print "FizzBuzz".
 """
 
 def fizzbuzz():
+    # Your code goes here
     pass
 
 """
@@ -34,6 +36,7 @@ the resulting list will be:
 """
 
 def remove_indices(mylist, idxs):
+    # Your code goes here
     pass
 
 def test_remove_indices():
@@ -46,17 +49,18 @@ Modify connect to handle failed connections
 """
 import random
 
-
 def open_connection():
     if random.randint(0, 3) != 0:
         raise ValueError('failed to connect')
     return True
 
+def connect():
+    # Your code to handle bad connection goes here
+    # You might need to modify the arguments passed to connect() such as
+    # how many times the caller wants to try to make a connection before
+    # giving up.
+    return open_connection()
 
-def connect(nretry=100):
-    for _ in xrange(nretry):
-        # handle bad connection here...
-        if open_connection():
-            return
-
-connect()
+def test_connect():
+    for _i in range(100):
+        assert connect()

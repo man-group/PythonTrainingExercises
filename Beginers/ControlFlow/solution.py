@@ -75,10 +75,11 @@ def connect(nretry=100):
     for _ in range(nretry):
         try:
             if open_connection():
-                return
+                return True
         except ValueError:
             continue
+    return False
 
-
-if "__main__" in __name__:
-    connect()
+def test_connect():
+    for _i in range(100):
+        assert connect()

@@ -111,7 +111,7 @@ def select_first_item():
     # Your code goes here
 
 def select_last_item():
-    """Return first item."""
+    """Return last item."""
     x = ['A', 'B', 'C']
     # Your code goes here
 

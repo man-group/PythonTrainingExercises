@@ -28,7 +28,6 @@ Created on 3 Jan 2017
 
 @author: paulross
 '''
-from __future__ import print_function
 import pytest
 
 #==== Exercise 1:
@@ -100,7 +99,7 @@ def get_data_one(network):
     try:
         result = db.read()
     except IOError as err:
-        print(err)
+        print err
     db.close()
     return result
 
