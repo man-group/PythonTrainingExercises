@@ -30,7 +30,7 @@ def fizzbuzz():
             msg += 'Fizz'
         if num % 5 == 0:
             msg += 'Buzz'
-        else:
+        if not msg:
             msg = str(num)
         print msg
 
