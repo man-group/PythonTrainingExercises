@@ -10,7 +10,7 @@ These should all work with any modern version of Python (2.7 of 3.2+).
 
 It is best if you have pytest [http://pytest.org/latest/] installed but it is not essential.
 
-Beginers:
+Beginners:
 ---------
 
 Strings:
