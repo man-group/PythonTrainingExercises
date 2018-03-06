@@ -39,12 +39,20 @@ class Play(object):
         self._acts = []
         # dict of {name : description, ...}
         self.dramatis_personae = play.DRAMATIS_PERSONAE
-    
+
+    def __getattribute__(self, item, internal_ref=False):
+        if internal_ref or item != '_acts':
+            return super(Play, self).__getattribute__(item)
+
+        raise AttributeError("You're not allowed to access the `_acts` list.")
+
     def add_act(self, act):
-        self._acts.append(act)
-    
+        acts = self.__getattribute__('_acts', internal_ref=True)
+        acts.append(act)
+
     def gen_acts(self):
-        for act in self._acts:
+        acts = self.__getattribute__('_acts', internal_ref=True)
+        for act in acts:
             yield act
 
     def __str__(self):
@@ -59,12 +67,20 @@ class Act(object):
     def __init__(self, act_num):
         self.act_num = act_num
         self._scenes = []
-    
+
+    def __getattribute__(self, item, internal_ref=False):
+        if internal_ref or item != '_scenes':
+            return super(Act, self).__getattribute__(item)
+
+        raise AttributeError("You're not allowed to access the `_scenes` list.")
+
     def add_scene(self, scene):
-        self._scenes.append(scene)
-    
+        scenes = self.__getattribute__('_scenes', internal_ref=True)
+        scenes.append(scene)
+
     def gen_scenes(self):
-        for scene in self._scenes:
+        scenes = self.__getattribute__('_scenes', internal_ref=True)
+        for scene in scenes:
             yield scene
 
     def __str__(self):
@@ -72,22 +88,30 @@ class Act(object):
         for scene in self._scenes:
             lines.append('  %s' % str(scene))
         return '\n'.join(lines)
-        
-    
+
+
 class Scene(object):
     """Represents a scene in an act. This contains the ordered list of actor names."""
     def __init__(self, scene_num):
         self._index = 0
         self.scene_num = scene_num
         self._actors = []
-    
+
+    def __getattribute__(self, item, internal_ref=False):
+        if internal_ref or item != '_actors':
+            return super(Scene, self).__getattribute__(item)
+
+        raise AttributeError("You're not allowed to access the `_actors` list.")
+
     def add_actor(self, actor):
-        self._actors.append(actor)
-    
+        actors = self.__getattribute__('_actors', internal_ref=True)
+        actors.append(actor)
+
     def gen_actors(self):
-        for actor in self._actors:
+        actors = self.__getattribute__('_actors', internal_ref=True)
+        for actor in actors:
             yield actor
-    
+
     def __str__(self):
         return 'Scene %d, actors: %s' % (self.scene_num, ', '.join(self._actors))
 
@@ -147,7 +171,7 @@ if __name__ == '__main__':
 #     pprint.pprint(get_acts_scenes_actors())
 #     p = get_play()
 #     print p
-    
+
     s = Scene(1)
     s.add_actor('a')
     s.add_actor('b')

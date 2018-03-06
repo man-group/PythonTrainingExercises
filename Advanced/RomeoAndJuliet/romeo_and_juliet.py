@@ -19,7 +19,7 @@ has moved on!
 
 At the end of the play return your result and it will be printed out to see
 how accurate you were:
- 
+
 Here is an example where we always guess 'ROMEO':
 
 def strat_empty(play):
@@ -66,7 +66,7 @@ Empty strategy (always ROMEO):
    5     2      0.0      8.0      0.0%
    5     3      6.0     59.0      9.2%
               163.0    676.0     19.4%
-              
+
 Hmmm 19.4 %, can you do better?
 
 There is one other example here which just guesses at random with predictably
@@ -85,10 +85,16 @@ Created on 18 Mar 2015
 @author: paulross
 """
 import random
+from mock import Mock
 
 from Exercises.RomeoAndJuliet.util import parser
 from Exercises.RomeoAndJuliet.util import result
 
+#--------------- Bulletproofing --------------
+
+err_msg = "You're not allowed to access `locals()` or `globals()`."
+__builtins__.locals = __builtins__.globals = Mock()
+locals.side_effect = globals.side_effect = NameError(err_msg)
 
 #----------------- Strategies ----------------
 
