@@ -16,10 +16,10 @@ __rights__  = 'Copyright (c) 2011 Paul Ross.'
 # Simple functions, with defaults.
 ##################################
 def twoArgsOneDefault(a, b='default_value'):
-    print '    a=%s, b=%s' % (a, b)
+    print('    a=%s, b=%s' % (a, b))
     
 def main():
-    print 'callTwoArgsOneDefault():'
+    print ('callTwoArgsOneDefault():')
     twoArgsOneDefault('a_only')
     twoArgsOneDefault('a_value', b='b_given')
 
