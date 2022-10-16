@@ -15,7 +15,7 @@ def noArgs():
 
 def twoArgs(a, b):
     """Function that takes two arguments."""
-    print ('    twoArgs(): a=%s, b=%s' % (a, b))@goodship1@goodship1
+    print ('    twoArgs(): a=%s, b=%s' % (a, b))
 
 def main():
     print('callSimple():')
