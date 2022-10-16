@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # Start the generator
     g.next()
     # Send stuff
-    print g.send('zzz')
-    print g.send('Hi there')
-    print 'Sorted list is {0:s}'.format(g.next())    
+    print(g.send('zzz'))
+    print(g.send('Hi there'))
+    print('Sorted list is {0:s}'.format(g.next()))    
     g.close()
