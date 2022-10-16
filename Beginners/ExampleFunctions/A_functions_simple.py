@@ -11,14 +11,14 @@ Created on Aug 25, 2011
 ###################
 def noArgs():
     """Function that takes no arguments."""
-    print '    noArgs(): No arguments'
+    print('    noArgs(): No arguments')
 
 def twoArgs(a, b):
     """Function that takes two arguments."""
-    print '    twoArgs(): a=%s, b=%s' % (a, b)
+    print ('    twoArgs(): a=%s, b=%s' % (a, b))@goodship1@goodship1
 
 def main():
-    print 'callSimple():'
+    print('callSimple():')
     noArgs()
     twoArgs(12, 34)
     twoArgs(b='b_given', a='a_given')
