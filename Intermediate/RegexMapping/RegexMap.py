@@ -48,7 +48,7 @@ ABCDEFGH
 Hello world
 42"""
     result = matchLines(text.split('\n'))
-    print result
+    print(result)
 
 if __name__ == '__main__':
     main()
