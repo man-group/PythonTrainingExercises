@@ -7,7 +7,7 @@ Created on 2 Apr 2015
 """
 
 def main():
-    print 'Hi there'
+    print('Hi there')
 
 if __name__ == '__main__':
     main()
