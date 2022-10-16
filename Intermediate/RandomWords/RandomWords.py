@@ -43,7 +43,7 @@ def main():
             break
         max_len = max([len(w) for w in words])
         for n in range(max_len):
-            print '%4d: %s' % (n, ' '.join(randomWords(words, n)))
+            print('%4d: %s' % (n, ' '.join(randomWords(words, n))))
 
 if __name__ == '__main__':
     main()
