@@ -8,19 +8,19 @@ Created on Aug 25, 2011
 
 def unpackArgs(*args):
     for arg in args:
-        print type(arg), arg
-    print
+        print(type(arg), arg)
+    print("\n")
 
 def main():
-    print 'callUnpackArgs():'
-    print 'Specific arguments:'
+    print('callUnpackArgs():')
+    print('Specific arguments:')
     unpackArgs(0,1,2,3)
     l = ['a', 'b', 'c', 'd']
-    print 'Single list argument:'
+    print('Single list argument:')
     unpackArgs(l)
-    print 'Unpacked list argument:'
+    print('Unpacked list argument:')
     unpackArgs(*l)
-    print 'Single value unpacked'
+    print('Single value unpacked')
     unpackArgs(*'hello')
 
 if __name__ == '__main__':

@@ -1,13 +1,13 @@
 # Given
 x = 10000.0
 y = 3.0
-print x / y
-print 10000 / 3
+print(x / y)
+print(10000 / 3)
 # What is happening?
 
 # Given
-print x - 1 / y
-print (x - 1) / y
+print(x - 1 / y)
+print((x - 1) / y)
 # What is happening?
 
 # Given 

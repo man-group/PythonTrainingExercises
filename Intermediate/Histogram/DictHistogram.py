@@ -60,7 +60,7 @@ def pprint_histogram(d, bucket_size, char='+', width=80, key_format='%6.3f'):
     char is the character to use for the histogram bars.
     width is the total width to use.
     key_format is used to turn the keys into strings."""
-    print pformat_histogram(d, bucket_size, char, width, key_format)
+    print(pformat_histogram(d, bucket_size, char, width, key_format))
 
 
 def pformat_histogram(d, bucket_size, char='+', width=80, key_format='%6.3f'):

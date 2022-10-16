@@ -17,13 +17,13 @@ import pprint
 # With keyword arguments.
 #########################
 def cheeseshop(kind, *args, **kwargs):
-    print "-- Do you have any", kind, "?"
-    print " *args ".center(40, '-')
+    print("-- Do you have any", kind, "?")
+    print(" *args ".center(40, '-'))
     pprint.pprint(args)
-    print " *args ".center(40, '-')
-    print " *kwargs ".center(40, '-')
+    print(" *args ".center(40, '-'))
+    print(" *kwargs ".center(40, '-'))
     pprint.pprint(kwargs)
-    print " *kwargs ".center(40, '-')
+    print(" *kwargs ".center(40, '-'))
 
 def main():
     cheeseshop(
