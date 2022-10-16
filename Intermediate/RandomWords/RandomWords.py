@@ -47,4 +47,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print 'Bye, bye.'
+    print('Bye, bye.')
