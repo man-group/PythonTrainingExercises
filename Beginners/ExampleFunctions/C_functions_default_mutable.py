@@ -28,13 +28,13 @@ def defaultMutableFix(a=x):
 
 def main():
     # defaultMutableCatch()
-    print 'defaultMutableCatch():', defaultMutableCatch()
-    print 'defaultMutableCatch():', defaultMutableCatch([])
-    print 'defaultMutableCatch():', defaultMutableCatch()
+    print('defaultMutableCatch():', defaultMutableCatch())
+    print('defaultMutableCatch():', defaultMutableCatch([]))
+    print('defaultMutableCatch():', defaultMutableCatch())
     # defaultMutableFix()
-    print 'defaultMutableFix():', defaultMutableFix()
-    print 'defaultMutableFix():', defaultMutableFix()
-    print 'defaultMutableFix():', defaultMutableFix()
+    print('defaultMutableFix():', defaultMutableFix())
+    print('defaultMutableFix():', defaultMutableFix())
+    print('defaultMutableFix():', defaultMutableFix())
     
 if __name__ == '__main__':
     main()
